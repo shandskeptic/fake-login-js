@@ -9,13 +9,6 @@ let userLogin = document.getElementById("userLogin");
 let newUser = document.getElementById("newUser");
 let logout = document.getElementById("logout");
 
-adminLogin.style.display = "none";
-userLogin.style.display = "none";
-newUser.style.display = "none";
-logout.style.display = "none";
-loginForm.style.display = "block";
-registerForm.style.display = "none";
-
 function onLogin() {
 	if (username.value == "" && password.value == "") {
 		alert("Tidak bisa login");
@@ -60,6 +53,10 @@ function Register() {
 		alert("Register berhasil");
 		loginForm.style.display = "block";
 		registerForm.style.display = "none";
+	} else {
+		alert("Tidak bisa Register");
+		loginForm.style.display = "none";
+		localStorage.clear();
 	}
 }
 
